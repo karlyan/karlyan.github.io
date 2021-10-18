@@ -36,7 +36,6 @@ this is for testing
 ```bash
 # comment
 curl abc
-
 ```
 
 the first time to setup hugo page
