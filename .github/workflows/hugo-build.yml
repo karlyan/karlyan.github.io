@@ -25,12 +25,13 @@ jobs:
         run: |
           cd blog
           hugo --minify
+          mv public ../
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/hugo-pages' }}
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: hugo-pages-publish
           PUBLISH_DIR: ./docs
           commit_message: ${{ github.event.head_commit.message }}
