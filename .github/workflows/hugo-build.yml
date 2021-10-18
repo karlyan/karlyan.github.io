@@ -25,7 +25,7 @@ jobs:
         run: |
           cd blog
           hugo --minify
-          mv public ../docs
+          mv public ../
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
