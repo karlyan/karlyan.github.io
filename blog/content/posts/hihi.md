@@ -38,3 +38,5 @@ this is for testing
 curl abc
 
 ```
+
+the first time to setup hugo page
